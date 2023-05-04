@@ -44,7 +44,7 @@ public class ExchangeRateController {
 	}
 	
 	/**
-	 * Api to fetch  list of supported currency  along with request count 
+	 * Api to fetch  list of supported currency  along with  count 
 	 * 
 	 * @return
 	 * @throws ExchangeRateException
