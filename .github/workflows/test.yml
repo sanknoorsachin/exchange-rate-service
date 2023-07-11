@@ -21,7 +21,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name : Install zip
+    - name : zip files
       run : |
        zip -r /home/runner/work/exchange-rate-service  /home/runner/work/exchange-rate-service/exchange-rate-service
        
