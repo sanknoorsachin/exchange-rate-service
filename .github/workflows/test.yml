@@ -23,8 +23,8 @@ jobs:
     - uses: actions/checkout@v3
     - name : Install zip
       run : |
-       sudo apt install zip
-       echo zip -v
+       sudo zip -v
+       
     
     - name: REST API with curl
       run: |
