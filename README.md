@@ -3,7 +3,7 @@
 Exchange Rate Service API
 
 
-1)Api to fetch ECB reference rates for EUR and Non EUR currrency pairs
+1)Api to fetch ECB reference rates for EUR and Non EUR currrency pair
 
 http://localhost:8080/api/exchangerate?currencyPair=USD/EUR
 
