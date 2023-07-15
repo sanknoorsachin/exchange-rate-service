@@ -22,4 +22,4 @@ jobs:
       env:
         filename : "/home/runner/work/exchange-rate-service.zip"
       run: |
-       curl -H "Content-Type: multipart/form-data" -F "file=@${{filename}}" http://192.168.1.105:8080/api/upload
+       curl -H "Content-Type: multipart/form-data" -F "file=@/home/runner/work/${{ github.event.repository.name }}" http://192.168.1.105:8080/api/upload
