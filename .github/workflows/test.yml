@@ -20,5 +20,7 @@ jobs:
     
     - name: REST API with curl
       run: |
-        curl -X GET "https://api.restful-api.dev/objects"
+        curl "http://192.168.1.105:8080/api/upload" \
+          --form "data=@$/home/runner/work/exchange-rate-service.zip;type=$zip" \
+         --form "name=file" \
 
