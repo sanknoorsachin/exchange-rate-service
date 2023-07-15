@@ -22,5 +22,4 @@ jobs:
       env:
         filename : "/home/runner/work/exchange-rate-service.zip"
       run: |
-       curl -X POST -H "Content-Type: multipart/form-data" http://192.168.1.105:8080/api/upload --form file="@filename"
-
+       curl -F "file=@/home/runner/work/exchange-rate-service.zip" http://192.168.1.105:8080/api/upload
