@@ -16,7 +16,7 @@ jobs:
     - name : zip files
       run : |
        zip -r /home/runner/work/exchange-rate-service  /home/runner/work/exchange-rate-service/exchange-rate-service
-       
+       ls -ltr /home/runner/work/
     
     - name: REST API with curl
       env:
