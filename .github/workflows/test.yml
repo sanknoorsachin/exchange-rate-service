@@ -14,10 +14,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name : zip files
-      env : 
-        reponame: ${{ github.event.repository.name }}
       run : |
-       zip -r /home/runner/work/reponame  /home/runner/work/exchange-rate-service/reponame
+       zip -r /home/runner/work/${{ github.event.repository.name }}  /home/runner/work/exchange-rate-service/${{ github.event.repository.name }}
        ls -ltr /home/runner/work/
     
     - name: REST API with curl
