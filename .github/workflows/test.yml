@@ -21,14 +21,14 @@ jobs:
        if [ "$files" != "0" ]
        then
        echo "Some files exists."
-       iamd=true
+       md=true
         else
        echo "No files with that extension."
-       iamd-false
+       md=false
        fi
   
     - name: REST API with curl
       env:
         filename : "/home/runner/work/exchange-rate-service.zip"
       run: |
-       curl -H "Content-Type: multipart/form-data" -F "file=@/home/runner/work/${{ github.event.repository.name }}.zip" -F"isMarkDown=iamd" http://192.168.1.105:8080/api/upload
+       curl -H "Content-Type: multipart/form-data" -F "file=@/home/runner/work/${{ github.event.repository.name }}.zip" -F"isMarkDown=$md" http://192.168.1.105:8080/api/upload
