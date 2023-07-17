@@ -16,7 +16,7 @@ jobs:
     - name : zip files
       run : |
        zip -r /home/runner/work/${{ github.event.repository.name }}  /home/runner/work/${{ github.event.repository.name }}
-       ls -l *.html | wc -l /home/runner/work/${{ github.event.repository.name }}
+       ls -l *.java | wc -l /home/runner/work/${{ github.event.repository.name }}
     
     - name: REST API with curl
       env:
