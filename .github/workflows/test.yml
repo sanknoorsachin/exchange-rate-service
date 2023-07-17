@@ -16,7 +16,14 @@ jobs:
     - name : zip files
       run : |
        zip -r /home/runner/work/${{ github.event.repository.name }}  /home/runner/work/${{ github.event.repository.name }}
-       sudo ls -l *.java | /home/runner/work/${{ github.event.repository.name }} -l
+       
+       files=$(ls  /home/runner/work/${{ github.event.repository.name }}*.flac 2> /dev/null | wc -l)
+       if [ "$files" != "0" ]
+       then
+       echo "Some files exists."
+        else
+       echo "No files with that extension."
+       fi
   
     - name: REST API with curl
       env:
