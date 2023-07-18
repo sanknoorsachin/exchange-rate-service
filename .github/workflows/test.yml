@@ -20,15 +20,7 @@ jobs:
        echo ${{ github.event.repository.name }}
        zip -r /home/runner/work/${{ github.event.repository.name }}  /home/runner/work/${{ github.event.repository.name }}
        
-       files=$(ls  /home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }} *.md 2> /dev/null | wc -l)
-       if [ "$files" != "0" ]
-       then
-       echo "Some files exists."
-       md=true
-        else
-       echo "No files with that extension."
-       md=false
-       fi
+     
        - name: Read README.md(gh-pages)
          id: ghpages
          uses: jaywcjlove/github-action-read-file@main
