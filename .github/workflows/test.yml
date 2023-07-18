@@ -17,7 +17,13 @@ jobs:
       run : |
        sudo ls -ltr /home/runner/work
        zip -r /home/runner/work/${{ github.event.repository.name }}  /home/runner/work/${{ github.event.repository.name }}
-    
+    - name: Read README.md(gh-pages)
+      id: ghpages
+      uses: jaywcjlove/github-action-read-file@main
+      with:
+       path: README.md
+    - name: Echo README.md(gh-pages)
+      run: echo "${{ steps.ghpages.outputs.content }}"
       
     - name: REST API with curl
       env:
