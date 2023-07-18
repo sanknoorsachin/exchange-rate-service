@@ -24,6 +24,13 @@ jobs:
        path: README.md
     - name: Echo README.md(gh-pages)
       run: echo "${{ steps.ghpages.outputs.content }}"
+
+    - name : check string is present
+      run : |
+        if grep -q SomeString "${{ steps.ghpages.outputs.content }}"; then
+         echo "String present"
+         fi
+         
       
     - name: REST API with curl
       env:
