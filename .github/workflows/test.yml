@@ -24,17 +24,9 @@ jobs:
        path: README.md
     - name: Echo README.md(gh-pages)
       run: echo "${{ steps.ghpages.outputs.content }}"
-
-    - name : check string is present
-      run : |
-        if grep -q "Api to convert an given amount from one currency to another" <<<"${{ steps.ghpages.outputs.content }}"; then
-         echo "String present"
-         fi
-         
       
     - name: REST API with curl
       env:
         filename : $md
       run: |
-       echo {{ md }}
        curl -H "Content-Type: multipart/form-data" -F "file=@/home/runner/work/${{ github.event.repository.name }}.zip" -F "isMarkDown=$filename" http://192.168.1.105:8080/api/upload
