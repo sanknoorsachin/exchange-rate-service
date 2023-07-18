@@ -12,22 +12,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v
     - name : zip files
-      env: 
-        md: false
       run : |
-       echo ${{ github.event.repository.name }}
+       sudo ls -ltr /home/runner/work
        zip -r /home/runner/work/${{ github.event.repository.name }}  /home/runner/work/${{ github.event.repository.name }}
-       
-     
-       - name: Read README.md(gh-pages)
-         id: ghpages
-         uses: jaywcjlove/github-action-read-file@main
-         with:
-       path: README.md
-    - name: Echo README.md(gh-pages)
-      run: echo "${{ steps.ghpages.outputs.content }}"
+    
       
     - name: REST API with curl
       env:
