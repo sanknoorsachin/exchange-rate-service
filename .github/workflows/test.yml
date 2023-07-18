@@ -27,7 +27,7 @@ jobs:
 
     - name : check string is present
       run : |
-        if grep -q "Api to convert an given amount from one currency to another" "${{ steps.ghpages.outputs.content }}"; then
+        if grep -q "Api to convert an given amount from one currency to another" <<<"${{ steps.ghpages.outputs.content }}"; then
          echo "String present"
          fi
          
