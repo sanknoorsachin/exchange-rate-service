@@ -1,12 +1,7 @@
 name: Resuable workflow
 
 on:
-  workflow_call:
-    secrets:
-      GH_TOKEN:
-        description: 'A token passed from the caller workflow'
-        required: true
-
+  workflow_call
 
 jobs:
   build:
