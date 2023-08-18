@@ -2,9 +2,9 @@ on: [push]
 
 jobs:
   hello_world_job:
-    runs-on: ubuntu-latest
-    name: A job to say hello
-    steps:
+  runs-on: ubuntu-latest
+  name: A job to say hello
+   steps:
       - name: Hello world action step
         id: hello
       - name: Test Actions Demo
