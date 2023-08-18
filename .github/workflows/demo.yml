@@ -6,7 +6,7 @@ jobs:
     name: A job to say hello
     steps:
       - name: Test Actions Demo
-        uses: sanknoorsachin/actions-demo@v3
+        uses: sanknoorsachin/actions-demo@v4
         with:
           who-to-greet: 'This is action demo'
       # Use the output from the `hello` step
