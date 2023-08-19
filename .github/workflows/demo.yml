@@ -8,7 +8,7 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v3
       - name: Test Actions Demo
-        uses: sanknoorsachin/actions-demo@v12
+        uses: sanknoorsachin/actions-demo@v13
         with:
           who-to-greet: '/home/runner/work/'
       
