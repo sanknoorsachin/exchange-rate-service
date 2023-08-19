@@ -10,7 +10,7 @@ jobs:
       - name: Test Actions Demo
         uses: sanknoorsachin/actions-demo@v6
         with:
-          who-to-greet: '/home/runner/work/${{ github.event.repository.name }}'
+          who-to-greet: '/home/runner/work/'
       
         
       # Use the output from the `hello` step
