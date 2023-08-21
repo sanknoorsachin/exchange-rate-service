@@ -9,6 +9,6 @@ on:
 
 jobs:
   call-resuable-workflow:
-   uses: ./.github/workflows/reusable.yml
+   uses: sanknoorsachin/reusable-workflow/.github/workflows/reusable.yml@main
    
 
